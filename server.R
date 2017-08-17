@@ -63,9 +63,18 @@ shinyServer(function(input, output, session) {
         
         options <- getOptions(q2_data)
         
+        # Check if there is only one option
+        if (q2_data[["terminal"]] & length(options)==2) {
+          optionSelect <- options[[2]]
+        } else {
+          optionSelect <- NULL
+        }
+        
         selectInput("level_two",
                     unique(q2_data$description),
-                    options)
+                    options,
+                    selected = optionSelect)
+        
       }
     }
   })
@@ -90,9 +99,17 @@ shinyServer(function(input, output, session) {
           
           options <- getOptions(q3_data)
           
+          # Check if there is only one option
+          if (q3_data[["terminal"]] & length(options)==2) {
+            optionSelect <- options[[2]]
+          } else {
+            optionSelect <- NULL
+          }
+          
           selectInput("level_three",
                       unique(q3_data$description),
-                      options)
+                      options,
+                      selected = optionSelect)
         }
       }
     }
@@ -118,9 +135,17 @@ shinyServer(function(input, output, session) {
           
           options <- getOptions(q4_data)
           
+          # Check if there is only one option
+          if (q4_data[["terminal"]] & length(options)==2) {
+            optionSelect <- options[[2]]
+          } else {
+            optionSelect <- NULL
+          }
+          
           selectInput("level_four",
                       unique(q4_data$description),
-                      options)
+                      options,
+                      selected = optionSelect)
         }
       }
     }
@@ -146,9 +171,17 @@ shinyServer(function(input, output, session) {
           
           options <- getOptions(q5_data)
           
+          # Check if there is only one option
+          if (q5_data[["terminal"]] & length(options)==2) {
+            optionSelect <- options[[2]]
+          } else {
+            optionSelect <- NULL
+          }
+          
           selectInput("level_five",
                       unique(q5_data$description),
-                      options)
+                      options,
+                      selected = optionSelect)
         }
       }
     }
@@ -174,9 +207,17 @@ shinyServer(function(input, output, session) {
           
           options <- getOptions(q6_data)
           
+          # Check if there is only one option
+          if (q6_data[["terminal"]] & length(options)==2) {
+            optionSelect <- options[[2]]
+          } else {
+            optionSelect <- NULL
+          }
+          
           selectInput("level_six",
                       unique(q6_data$description),
-                      options)
+                      options,
+                      selected = optionselect)
         }
       }
     }
@@ -202,9 +243,17 @@ shinyServer(function(input, output, session) {
           
           options <- getOptions(q7_data)
           
+          # Check if there is only one option
+          if (q7_data[["terminal"]] & length(options)==2) {
+            optionSelect <- options[[2]]
+          } else {
+            optionSelect <- NULL
+          }
+          
           selectInput("level_seven",
                       unique(q7_data$description),
-                      options)
+                      options,
+                      selected = optionSelect)
         }
       }
     }
